@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Block access to any future admin or private folders
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://www.yaraauto.it/sitemap.xml

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Page Not Found | YaraAuto</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="images/site_logo/minilogo5.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --red: #D93829;
+      --red-glow: rgba(217,56,41,.3);
+      --fd: 'Bebas Neue', sans-serif;
+      --fb: 'DM Sans', sans-serif;
+    }
+    [data-theme="dark"] {
+      --bg: #090909; --tx: #f0ede8; --tx2: rgba(240,237,232,.55);
+    }
+    [data-theme="light"] {
+      --bg: #f2efea; --tx: #0e0e0e; --tx2: rgba(14,14,14,.52);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--fb);
+      background: var(--bg); color: var(--tx);
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      text-align: center; padding: 30px 20px;
+      transition: background .3s, color .3s;
+    }
+
+    .big-num {
+      font-family: var(--fd);
+      font-size: clamp(8rem, 25vw, 18rem);
+      line-height: 1;
+      color: var(--red);
+      opacity: .18;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .content {
+      position: relative; z-index: 1;
+      display: flex; flex-direction: column;
+      align-items: center; gap: 18px;
+    }
+
+    .logo-wrap {
+      height: 52px; margin-bottom: 8px;
+    }
+    .logo-wrap img { height: 100%; width: auto; object-fit: contain; }
+    .logo-fb {
+      font-family: var(--fd); font-size: 1.8rem;
+      letter-spacing: .04em; color: var(--tx);
+    }
+    .logo-fb span { color: var(--red); }
+
+    h1 {
+      font-family: var(--fd);
+      font-size: clamp(1.8rem, 6vw, 3.2rem);
+      letter-spacing: .04em; color: var(--tx);
+    }
+
+    p {
+      font-size: clamp(.9rem, 2vw, 1.05rem);
+      color: var(--tx2); max-width: 380px; line-height: 1.6;
+    }
+
+    .home-btn {
+      display: inline-flex; align-items: center; gap: 9px;
+      padding: 13px 26px; border-radius: 12px;
+      background: var(--red); color: #fff;
+      font-size: .92rem; font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 5px 22px var(--red-glow);
+      transition: transform .22s, box-shadow .22s;
+      margin-top: 6px;
+    }
+    .home-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 30px var(--red-glow);
+    }
+    .home-btn:active { transform: scale(.96); }
+
+    .countdown {
+      font-size: .8rem; color: var(--tx2); margin-top: 4px;
+    }
+    .countdown span { color: var(--red); font-weight: 700; }
+  </style>
+</head>
+<body>
+  <div class="big-num" aria-hidden="true">404</div>
+
+  <div class="content">
+    <div class="logo-wrap">
+      <img src="images/site_logo/minilogo3.webp" alt="YaraAuto"
+           onerror="this.style.display='none'; document.getElementById('fb').style.display='block'">
+      <span class="logo-fb" id="fb" style="display:none">YARA<span>AUTO</span></span>
+    </div>
+
+    <h1 id="title">PAGE NOT FOUND</h1>
+    <p id="msg">The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+
+    <a href="/" class="home-btn" id="homeBtn">
+      <i class="fas fa-house" aria-hidden="true"></i>
+      <span id="btnTxt">Back to Homepage</span>
+    </a>
+
+    <p class="countdown" id="countdown">
+      Automatic redirect in <span id="sec">10</span> seconds
+    </p>
+  </div>
+
+  <script>
+    // Apply saved theme
+    const t = localStorage.getItem('ya-theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', t);
+
+    // Detect language
+    const lang = (navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en';
+    if (lang === 'it') {
+      document.documentElement.lang = 'it';
+      document.getElementById('title').textContent = 'PAGINA NON TROVATA';
+      document.getElementById('msg').textContent = 'La pagina che cerchi non esiste o è stata spostata. Torniamo alla home.';
+      document.getElementById('btnTxt').textContent = 'Torna alla Homepage';
+      document.getElementById('countdown').innerHTML = 'Reindirizzamento automatico tra <span id="sec">10</span> secondi';
+    }
+
+    // Countdown redirect
+    let s = 10;
+    const secEl = document.getElementById('sec');
+    const interval = setInterval(() => {
+      s--;
+      if (secEl) secEl.textContent = s;
+      if (s <= 0) { clearInterval(interval); window.location.href = '/'; }
+    }, 1000);
+
+    // Cancel on click
+    document.getElementById('homeBtn').addEventListener('click', () => clearInterval(interval));
+  </script>
+</body>
+</html>
