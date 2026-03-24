@@ -5,4 +5,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /private/
 
-Sitemap: https://www.yaraauto.it/sitemap.xml
+Sitemap: https://yaraauto.it/sitemap.xml
