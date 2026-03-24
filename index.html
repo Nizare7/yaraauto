@@ -989,5 +989,123 @@ window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loade
 
 document.getElementById('fty').textContent=new Date().getFullYear();
 </script>
+
+<div id="cookie-banner" class="cb-hidden">
+  <div class="cb-container">
+    <div class="cb-text-side">
+      <p id="cb-text"></p>
+    </div>
+    <div class="cb-button-side">
+      <button id="accept-cookies" class="cb-btn"></button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* 1. Posizionamento del Banner */
+  #cookie-banner {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1000px; /* Molto più largo per stare su una riga su desktop */
+    background: #111;
+    border: 1px solid #333;
+    z-index: 999999;
+    border-radius: 20px; /* Arrotondamento elegante */
+    box-shadow: 0 15px 50px rgba(0,0,0,0.9);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    padding: 20px 40px;
+  }
+
+  /* Animazione comparsa */
+  .cb-hidden { opacity: 0; visibility: hidden; transform: translate(-50%, 50px) !important; }
+
+  /* 2. Layout Flex */
+  .cb-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  .cb-text-side { flex: 1; }
+
+  #cookie-banner p { 
+    font-family: 'DM Sans', sans-serif; 
+    font-size: 14px; 
+    margin: 0; 
+    color: #eee; 
+    line-height: 1.6;
+  }
+
+  #cookie-banner a { color: var(--red, #D93829); text-decoration: underline; font-weight: 600; }
+
+  /* 3. TASTO ARROTONDATO (Pill Style) */
+  .cb-btn {
+    background: var(--red, #D93829);
+    color: #fff;
+    border: 2px solid var(--red, #D93829);
+    padding: 12px 35px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    border-radius: 100px !important; /* Arrotondamento totale */
+    transition: all 0.3s ease;
+    white-space: nowrap; /* Impedisce al testo del tasto di andare a capo */
+  }
+
+  .cb-btn:hover { 
+    background: transparent; 
+    color: var(--red, #D93829);
+  }
+
+  /* 4. RESPONSIVE (Tablet e Mobile) */
+  @media (max-width: 900px) {
+    #cookie-banner { padding: 25px; bottom: 20px; }
+    .cb-container { flex-direction: column; text-align: center; gap: 20px; }
+    .cb-btn { width: 100%; } /* Su mobile il tasto diventa largo quanto il banner */
+    #cookie-banner p { font-size: 13px; }
+  }
+</style>
+
+<script>
+  (function() {
+    // Scommenta la riga sotto se vuoi resettare il banner per testarlo
+    // localStorage.removeItem('cookie-consent'); 
+
+    const banner = document.getElementById('cookie-banner');
+    const btn = document.getElementById('accept-cookies');
+    const txt = document.getElementById('cb-text');
+    
+    const lang = (navigator.language || 'en').toLowerCase().startsWith('it') ? 'it' : 'en';
+
+    const content = {
+      it: {
+        msg: 'Utilizziamo cookie tecnici per garantirti la migliore esperienza su YaraAuto. Nessun dato di profilazione viene memorizzato. Consulta la nostra <a href="cookie.html">Cookie Policy</a> per maggiori dettagli.',
+        btn: 'ACCETTA'
+      },
+      en: {
+        msg: 'We use technical cookies to ensure the best experience on YaraAuto. No profiling data is stored. Check our <a href="cookie.html">Cookie Policy</a> for more details.',
+        btn: 'ACCEPT'
+      }
+    };
+
+    txt.innerHTML = content[lang].msg;
+    btn.textContent = content[lang].btn;
+
+    if (!localStorage.getItem('cookie-consent')) {
+      setTimeout(() => banner.classList.remove('cb-hidden'), 600);
+    }
+
+    btn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'accepted');
+      banner.classList.add('cb-hidden');
+    });
+  })();
+</script>
+
 </body>
 </html>
