@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <!-- SEO -->
+  <title>YaraAuto — Certified Used Cars | Auto Usate Garantite</title>
+  <meta name="description" content="YaraAuto sells certified pre-owned vehicles with passion, quality and trust. Browse Audi, BMW, Fiat and more. | YaraAuto vende auto usate garantite con passione, qualità e fiducia.">
+  <meta name="keywords" content="auto usate, used cars, concessionario, car dealer, YaraAuto, occasioni auto, auto garantite, Audi usata, BMW usata">
+  <meta name="author" content="YaraAuto">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <link rel="canonical" href="https://www.yaraauto.it/">
+  <link rel="alternate" hreflang="en" href="https://www.yaraauto.it/">
+  <link rel="alternate" hreflang="it" href="https://www.yaraauto.it/?lang=it">
+  <link rel="alternate" hreflang="x-default" href="https://www.yaraauto.it/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.yaraauto.it/">
+  <meta property="og:title" content="YaraAuto — Certified Used Cars">
+  <meta property="og:description" content="Find your dream car at YaraAuto. Certified pre-owned vehicles with quality and trust.">
+  <meta property="og:image" content="https://www.yaraauto.it/images/site_logo/logo_full_2.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="it_IT">
+  <meta property="og:site_name" content="YaraAuto">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="YaraAuto — Certified Used Cars">
+  <meta name="twitter:description" content="Find your dream car at YaraAuto. Quality, passion and trust.">
+  <meta name="twitter:image" content="https://www.yaraauto.it/images/site_logo/logo_full_2.webp">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoDealer","name":"YaraAuto","image":"https://www.yaraauto.it/images/site_logo/logo_full_2.webp","@id":"https://www.yaraauto.it","url":"https://www.yaraauto.it","telephone":"+393206138044","email":"yaraautoo@gmail.com","sameAs":["https://www.facebook.com/yaraautoo","https://www.instagram.com/yaraauto_srl/","https://wa.me/393206138044"],"address":{"@type":"PostalAddress","addressCountry":"IT"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"},"priceRange":"$$","description":"YaraAuto sells certified pre-owned vehicles with passion, quality and trust."}</script>
+
+  <link rel="icon" type="image/png" href="images/site_logo/minilogo5.webp">
+  <link rel="apple-touch-icon" href="images/site_logo/minilogo5.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AdSense: uncomment + replace ID when approved
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+
+  <style>
+/* ════════════════════════════════════════════
+   DESIGN TOKENS
+════════════════════════════════════════════ */
+:root {
+  --red:       #D93829;
+  --red-dark:  #b42e21;
+  --red-glow:  rgba(217,56,41,.3);
+  --ease:      cubic-bezier(.4,0,.2,1);
+  --ease-back: cubic-bezier(.34,1.56,.64,1);
+  --fd:        'Bebas Neue', sans-serif;
+  --fb:        'DM Sans', sans-serif;
+  --hh:        66px;
+}
+
+/* DARK */
+[data-theme="dark"] {
+  --bg:          #090909;
+  --bg2:         #111;
+  --bg3:         #1a1a1a;
+  --brd:         rgba(255,255,255,.07);
+  --brd2:        rgba(255,255,255,.13);
+  --tx:          #f0ede8;
+  --tx2:         rgba(240,237,232,.62);
+  --tx3:         rgba(240,237,232,.35);
+  --hbg:         rgba(9,9,9,.93);
+  --sh:          0 8px 36px rgba(0,0,0,.6);
+  --trk:         #252525;
+  --thumb:       #e0ddd8;
+}
+
+/* LIGHT */
+[data-theme="light"] {
+  --bg:          #f2efea;
+  --bg2:         #ffffff;
+  --bg3:         #e8e4de;
+  --brd:         rgba(0,0,0,.08);
+  --brd2:        rgba(0,0,0,.15);
+  --tx:          #0e0e0e;
+  --tx2:         rgba(14,14,14,.58);
+  --tx3:         rgba(14,14,14,.34);
+  --hbg:         rgba(242,239,234,.95);
+  --sh:          0 8px 36px rgba(0,0,0,.09);
+  --trk:         #d8d4ce;
+  --thumb:       #2a2a2a;
+}
+
+/* ════════════════════════════════════════════
+   RESET
+════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--fb);
+  background:var(--bg);color:var(--tx);
+  overflow-x:hidden;
+  -webkit-tap-highlight-color:transparent;
+  transition:background .32s var(--ease),color .32s var(--ease);
+}
+a{text-decoration:none;color:inherit}
+img,video{display:block;max-width:100%}
+button{cursor:pointer;border:none;background:none;font-family:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:4px}
+
+/* ════════════════════════════════════════════
+   LOADER
+════════════════════════════════════════════ */
+#loader{
+  position:fixed;inset:0;z-index:99999;
+  background:#090909;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;
+  transition:opacity .55s var(--ease),visibility .55s;
+}
+#loader.done{opacity:0;visibility:hidden;pointer-events:none}
+.ld-logo{width:min(260px,60vw);position:relative}
+.ld-logo img{width:100%;height:auto}
+.ld-logo .pulse{position:absolute;inset:0;animation:ldp 2s ease-in-out infinite}
+@keyframes ldp{0%,100%{opacity:.8;transform:scale(1)}50%{opacity:1;transform:scale(1.06)}}
+.ld-bar{width:min(190px,52vw);height:2px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden}
+.ld-fill{height:100%;width:0;background:var(--red);border-radius:999px;animation:ldf 1.4s var(--ease) forwards}
+@keyframes ldf{to{width:100%}}
+
+/* ════════════════════════════════════════════
+   HEADER
+════════════════════════════════════════════ */
+.hdr{
+  position:fixed;top:0;left:0;right:0;height:var(--hh);
+  background:var(--hbg);
+  backdrop-filter:blur(18px) saturate(1.4);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);
+  border-bottom:1px solid var(--brd);
+  z-index:1000;
+  transition:transform .3s var(--ease),background .32s,border-color .32s;
+}
+.hdr.hide{transform:translateY(-100%)}
+
+.hdr-in{
+  max-width:1360px;margin:0 auto;height:100%;
+  display:grid;grid-template-columns:1fr auto 1fr;
+  align-items:center;padding:0 22px;gap:10px;
+}
+
+/* Left */
+.hdr-l{display:flex;flex-direction:column;gap:3px}
+.hdr-l a{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.78rem;font-weight:500;color:var(--tx2);
+  transition:color .2s;white-space:nowrap;
+}
+.hdr-l a:hover{color:var(--red)}
+.hdr-l i{font-size:.72rem;color:var(--red);width:13px;flex-shrink:0}
+
+/* Logo */
+.hdr-logo{
+  justify-self:center;
+  display:flex;align-items:center;height:42px;
+}
+.hdr-logo img{height:100%;width:auto;object-fit:contain}
+.hdr-logo-fb{
+  font-family:var(--fd);font-size:1.5rem;
+  letter-spacing:.04em;color:var(--tx);
+  transition:color .32s;
+}
+.hdr-logo-fb span{color:var(--red)}
+
+/* Right */
+.hdr-r{display:flex;align-items:center;justify-content:flex-end;gap:7px}
+
+/* Social pill */
+.spill{
+  width:34px;height:34px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:var(--bg3);border:1px solid var(--brd2);
+  font-size:.88rem;color:var(--tx2);
+  transition:all .22s var(--ease);flex-shrink:0;
+}
+.spill:hover{
+  background:var(--red);border-color:var(--red);color:#fff;
+  transform:translateY(-2px);box-shadow:0 5px 16px var(--red-glow);
+}
+
+/* Theme toggle */
+.tog{
+  width:50px;height:26px;border-radius:999px;
+  background:var(--trk);border:1px solid var(--brd2);
+  position:relative;cursor:pointer;flex-shrink:0;
+  transition:background .3s,border-color .3s;
+}
+.tog::before{
+  content:'';
+  position:absolute;top:3px;left:3px;
+  width:18px;height:18px;border-radius:50%;
+  background:var(--thumb);
+  transition:transform .3s var(--ease-back),background .3s;
+  box-shadow:0 1px 4px rgba(0,0,0,.28);
+}
+[data-theme="light"] .tog::before{transform:translateX(24px)}
+.tog-ic{
+  position:absolute;top:50%;transform:translateY(-50%);
+  font-size:.6rem;pointer-events:none;transition:opacity .2s;
+}
+.tog-moon{left:5px}
+.tog-sun{right:4px}
+[data-theme="dark"]  .tog-sun {opacity:.3}
+[data-theme="dark"]  .tog-moon{opacity:1}
+[data-theme="light"] .tog-moon{opacity:.3}
+[data-theme="light"] .tog-sun {opacity:1}
+
+/* Mobile row */
+.mob-row{display:none;align-items:center;gap:8px}
+
+.mob-btn{
+  display:inline-flex;align-items:center;gap:5px;
+  padding:6px 12px;border-radius:999px;
+  background:var(--bg3);border:1px solid var(--brd2);
+  font-size:.76rem;font-weight:600;color:var(--tx2);
+  transition:all .2s;
+}
+.mob-btn i{font-size:.62rem;transition:transform .25s}
+.mob-btn.open i{transform:rotate(180deg)}
+
+.mob-drop{
+  position:absolute;top:var(--hh);left:0;right:0;
+  background:var(--hbg);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--brd);
+  max-height:0;overflow:hidden;
+  transition:max-height .35s var(--ease),padding .3s;
+  z-index:999;
+}
+.mob-drop.open{max-height:280px;padding:12px 20px 16px}
+.mob-drop a{
+  display:flex;align-items:center;gap:10px;
+  padding:8px 0;font-size:.87rem;font-weight:500;color:var(--tx2);
+  border-bottom:1px solid var(--brd);transition:color .2s;
+}
+.mob-drop a:last-child{border:none}
+.mob-drop a:hover{color:var(--red)}
+.mob-drop i{color:var(--red);width:15px;text-align:center;font-size:.82rem}
+.mob-soc{display:flex;gap:8px;padding:10px 0 0;border:none!important}
+
+/* ════════════════════════════════════════════
+   HERO — INFINITE CAROUSEL
+════════════════════════════════════════════ */
+.hero{
+  position:relative;
+  width:100%;height:100svh;min-height:480px;
+  overflow:hidden;background:#090909;
+}
+
+.c-track{display:flex;height:100%;will-change:transform}
+
+.c-slide{position:relative;min-width:100%;height:100%;overflow:hidden}
+.c-slide img,
+.c-slide video{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+}
+
+/* Gradient overlay */
+.c-slide::after{
+  content:'';
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    rgba(0,0,0,.15) 0%,
+    transparent 32%,
+    rgba(0,0,0,.52) 70%,
+    rgba(0,0,0,.92) 100%
+  );
+  pointer-events:none;z-index:1;
+}
+[data-theme="light"] .c-slide::after{
+  background:linear-gradient(180deg,
+    rgba(0,0,0,.08) 0%,
+    transparent 28%,
+    rgba(0,0,0,.42) 66%,
+    rgba(0,0,0,.85) 100%
+  );
+}
+
+/* Hero text */
+.hero-tx{
+  position:absolute;bottom:0;left:0;right:0;z-index:10;
+  padding:0 clamp(20px,6vw,72px) clamp(62px,8vw,80px);
+  pointer-events:none;
+}
+.hero-ey{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:clamp(.62rem,.85vw,.72rem);
+  font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--red);margin-bottom:10px;
+  opacity:0;transform:translateY(12px);
+  animation:fu .7s var(--ease) .25s forwards;
+}
+.hero-ey::before{
+  content:'';display:block;
+  width:26px;height:2px;background:var(--red);flex-shrink:0;
+}
+.hero-h1{
+  font-family:var(--fd);
+  font-size:clamp(3rem,9.5vw,9rem);
+  line-height:.92;letter-spacing:.025em;color:#fff;
+  text-shadow:0 4px 40px rgba(0,0,0,.5);
+  opacity:0;transform:translateY(20px);
+  animation:fu .85s var(--ease) .4s forwards;
+}
+.hero-h1 .r{color:var(--red)}
+.hero-sub{
+  margin-top:16px;
+  font-size:clamp(.87rem,1.8vw,1.1rem);
+  font-weight:400;color:rgba(255,255,255,.7);
+  max-width:490px;line-height:1.65;
+  opacity:0;transform:translateY(14px);
+  animation:fu .8s var(--ease) .6s forwards;
+}
+@keyframes fu{to{opacity:1;transform:translateY(0)}}
+
+/* Controls */
+.c-ctrl{
+  position:absolute;z-index:20;
+  bottom:clamp(46px,7vw,56px);right:clamp(18px,4vw,52px);
+  display:flex;align-items:center;gap:8px;
+}
+.c-btn{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);
+  color:#fff;font-size:.8rem;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .22s var(--ease);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.c-btn:hover{background:var(--red);border-color:var(--red);transform:scale(1.06)}
+.c-btn:active{transform:scale(.92)}
+
+/* Dots */
+.c-dots{
+  position:absolute;bottom:20px;left:50%;transform:translateX(-50%);
+  z-index:20;display:flex;gap:6px;align-items:center;
+}
+.c-dot{
+  width:6px;height:6px;border-radius:999px;
+  background:rgba(255,255,255,.28);
+  transition:all .3s var(--ease);cursor:pointer;border:none;
+}
+.c-dot.active{width:24px;background:var(--red);box-shadow:0 0 8px var(--red-glow)}
+
+/* Progress */
+.c-prog{
+  position:absolute;bottom:0;left:0;right:0;
+  height:2px;background:rgba(255,255,255,.07);z-index:20;
+}
+.c-prog-fill{height:100%;width:0;background:var(--red)}
+
+/* ════════════════════════════════════════════
+   INFO STRIP — 2 cards
+════════════════════════════════════════════ */
+.info-strip{
+  background:var(--bg2);
+  border-top:1px solid var(--brd);
+  border-bottom:1px solid var(--brd);
+  display:flex;justify-content:center;padding:0 20px;
+  transition:background .32s,border-color .32s;
+}
+.info-items{display:flex;max-width:520px;width:100%}
+.info-item{
+  flex:1;display:flex;flex-direction:column;
+  align-items:center;gap:8px;padding:26px 16px;text-align:center;
+  position:relative;
+}
+.info-item+.info-item::before{
+  content:'';position:absolute;left:0;top:22%;bottom:22%;
+  width:1px;background:var(--brd);
+}
+.info-ic{
+  width:44px;height:44px;border-radius:12px;
+  background:rgba(217,56,41,.1);border:1px solid rgba(217,56,41,.22);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);font-size:1rem;
+  transition:transform .25s var(--ease);
+}
+.info-item:hover .info-ic{transform:scale(1.1) rotate(-4deg)}
+.info-lb{font-size:.67rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--tx3)}
+.info-vl{font-size:.9rem;font-weight:600;color:var(--tx);transition:color .32s}
+
+/* ════════════════════════════════════════════
+   CTA SECTION
+════════════════════════════════════════════ */
+.cta{
+  background:var(--bg);
+  padding:clamp(60px,10vw,100px) 20px;
+  text-align:center;position:relative;overflow:hidden;
+  transition:background .32s;
+}
+.cta::before{
+  content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);
+  width:58px;height:3px;background:var(--red);border-radius:999px;
+}
+.cta::after{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 50% at 50% 0%,rgba(217,56,41,.07) 0%,transparent 70%);
+  pointer-events:none;
+}
+.cta-ey{
+  font-size:.68rem;font-weight:700;letter-spacing:.22em;
+  text-transform:uppercase;color:var(--red);margin-bottom:14px;
+}
+.cta-h2{
+  font-family:var(--fd);
+  font-size:clamp(2.6rem,7vw,6rem);
+  line-height:.95;letter-spacing:.03em;
+  color:var(--tx);margin-bottom:18px;
+  transition:color .32s;position:relative;z-index:1;
+}
+.cta-sub{
+  font-size:clamp(.9rem,1.8vw,1.05rem);
+  color:var(--tx2);max-width:430px;margin:0 auto 44px;
+  line-height:1.68;font-weight:400;
+  transition:color .32s;position:relative;z-index:1;
+}
+.cta-btns{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:12px;
+  position:relative;z-index:1;
+}
+.cta-btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:14px 22px;border-radius:14px;
+  font-size:.91rem;font-weight:600;letter-spacing:.01em;
+  transition:transform .25s var(--ease),box-shadow .25s;
+  min-width:185px;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.cta-btn::after{
+  content:'';position:absolute;inset:0;
+  background:rgba(255,255,255,.13);opacity:0;transition:opacity .25s;
+}
+.cta-btn:hover::after{opacity:1}
+.cta-btn:hover{transform:translateY(-3px)}
+.cta-btn:active{transform:scale(.96)}
+.cta-btn i{font-size:1.08rem}
+
+.bwa{background:linear-gradient(135deg,#25D366,#0f9d46);color:#fff;box-shadow:0 5px 22px rgba(37,211,102,.27)}
+.bwa:hover{box-shadow:0 9px 30px rgba(37,211,102,.45)}
+.bfb{background:linear-gradient(135deg,#1877F2,#0d5fc8);color:#fff;box-shadow:0 5px 22px rgba(24,119,242,.27)}
+.bfb:hover{box-shadow:0 9px 30px rgba(24,119,242,.45)}
+.big{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:#fff;box-shadow:0 5px 22px rgba(220,39,67,.27)}
+.big:hover{box-shadow:0 9px 30px rgba(220,39,67,.45)}
+
+/* ════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════ */
+footer{
+  background:var(--bg2);border-top:1px solid var(--brd);
+  padding:50px 20px 28px;
+  transition:background .32s,border-color .32s;
+}
+.ft-in{
+  max-width:1100px;margin:0 auto;
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;
+}
+.ft-logo{height:38px;margin-bottom:14px}
+.ft-logo img{height:100%;width:auto;object-fit:contain}
+.ft-desc{font-size:.83rem;color:var(--tx2);line-height:1.7;max-width:240px}
+.ft-col h4{
+  font-size:.67rem;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--red);margin-bottom:16px;
+}
+.ft-col a{
+  display:flex;align-items:center;gap:8px;
+  font-size:.85rem;color:var(--tx2);padding:5px 0;transition:color .2s;
+}
+.ft-col a:hover{color:var(--tx)}
+.ft-col i{width:14px;color:var(--red);font-size:.78rem}
+.ft-bot{
+  max-width:1100px;margin:30px auto 0;
+  padding-top:22px;border-top:1px solid var(--brd);
+  display:flex;flex-wrap:wrap;
+  justify-content:space-between;align-items:center;gap:8px;
+}
+.ft-bot p{font-size:.75rem;color:var(--tx3)}
+.ft-lnk{display:flex;gap:16px}
+.ft-lnk a{font-size:.75rem;color:var(--tx3);transition:color .2s}
+.ft-lnk a:hover{color:var(--tx2)}
+
+/* ════════════════════════════════════════════
+   BACK TO TOP
+════════════════════════════════════════════ */
+.btt{
+  position:fixed;bottom:22px;right:22px;z-index:500;
+  width:42px;height:42px;border-radius:50%;
+  background:var(--red);color:#fff;font-size:.87rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 18px var(--red-glow);
+  opacity:0;transform:translateY(16px);pointer-events:none;
+  transition:all .3s var(--ease);
+}
+.btt.show{opacity:1;transform:translateY(0);pointer-events:auto}
+.btt:hover{transform:translateY(-3px);box-shadow:0 7px 24px var(--red-glow)}
+
+/* ════════════════════════════════════════════
+   REVEAL
+════════════════════════════════════════════ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rv1{transition-delay:.08s}.rv2{transition-delay:.16s}.rv3{transition-delay:.24s}
+
+/* ════════════════════════════════════════════
+   AD SLOT (invisible placeholder)
+════════════════════════════════════════════ */
+.ad-slot{display:block;width:100%;min-height:90px;background:transparent}
+
+/* ════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════ */
+/* Tablet 900 */
+@media(max-width:900px){
+  .ft-in{grid-template-columns:1fr 1fr}
+  .ft-desc{max-width:100%}
+}
+
+/* Tablet 768 */
+@media(max-width:768px){
+  :root{--hh:58px}
+  .hdr-l,.hdr-r{display:none}
+  .mob-row{display:flex}
+  .hdr-in{grid-template-columns:1fr auto;padding:0 16px}
+  .hdr-logo{justify-self:flex-start;height:36px}
+
+  .hero-tx{padding:0 20px clamp(54px,11vw,70px)}
+  .hero-h1{font-size:clamp(2.8rem,11vw,5rem)}
+  .hero-sub{font-size:.88rem;max-width:88%}
+  .c-ctrl{bottom:clamp(48px,10vw,58px);right:16px}
+
+  .info-items{max-width:420px}
+  .info-item{padding:20px 10px}
+  .info-vl{font-size:.84rem}
+
+  .cta{padding:52px 20px}
+  .cta-btns{flex-direction:column;align-items:stretch;max-width:290px;margin:0 auto}
+  .cta-btn{min-width:unset;width:100%;padding:14px 18px}
+
+  .ft-in{grid-template-columns:1fr;gap:26px}
+  .ft-bot{flex-direction:column;align-items:flex-start;gap:8px}
+}
+
+/* Small 480 */
+@media(max-width:480px){
+  .hero-ey::before{display:none}
+  .hero-h1{font-size:clamp(2.4rem,13vw,3.6rem)}
+  .hero-sub{display:none}
+  .c-dot{width:5px;height:5px}
+  .c-dot.active{width:18px}
+  .info-item+.info-item::before{display:none}
+  .info-item{padding:16px 8px}
+}
+
+/* Large 1400 */
+@media(min-width:1400px){
+  .hdr-in{padding:0 40px}
+  .hero-tx{padding-left:80px;padding-right:80px}
+}
+  </style>
+</head>
+
+<body>
+<a id="top" tabindex="-1"></a>
+
+<!-- LOADER -->
+<div id="loader" role="status" aria-label="Loading YaraAuto">
+  <div class="ld-logo">
+    <img src="images/site_logo/logo5_2.webp" alt="YaraAuto">
+    <img src="images/site_logo/logo5_p4.webp" alt="" class="pulse" aria-hidden="true">
+  </div>
+  <div class="ld-bar"><div class="ld-fill"></div></div>
+</div>
+
+<!-- HEADER -->
+<header class="hdr" role="banner">
+  <div class="hdr-in">
+
+    <!-- Desktop Left: contacts -->
+    <div class="hdr-l" aria-label="Contacts">
+      <a href="tel:+393206138044"><i class="fas fa-phone" aria-hidden="true"></i>+39 320 613 8044</a>
+      <a href="mailto:yaraautoo@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>yaraautoo@gmail.com</a>
+    </div>
+
+    <!-- Center: logo -->
+    <a href="/" class="hdr-logo" aria-label="YaraAuto Homepage">
+      <img src="images/site_logo/minilogo3.webp" alt="YaraAuto"
+           id="hdr-img"
+           onerror="this.style.display='none';document.getElementById('hdr-fb').style.display='block'">
+      <span class="hdr-logo-fb" id="hdr-fb" style="display:none">YARA<span>AUTO</span></span>
+    </a>
+
+    <!-- Desktop Right: socials + theme -->
+    <div class="hdr-r">
+      <a href="https://wa.me/393206138044" target="_blank" rel="noopener noreferrer"
+         class="spill" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/yaraautoo" target="_blank" rel="noopener noreferrer"
+         class="spill" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/yaraauto_srl/" target="_blank" rel="noopener noreferrer"
+         class="spill" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+      <button class="tog" id="tog1" aria-label="Toggle dark/light mode">
+        <span class="tog-ic tog-moon" aria-hidden="true">🌙</span>
+        <span class="tog-ic tog-sun"  aria-hidden="true">☀️</span>
+      </button>
+    </div>
+
+    <!-- Mobile: contacts toggle + theme -->
+    <div class="mob-row">
+      <button class="mob-btn" id="mobBtn" aria-expanded="false" aria-controls="mobDrop"
+              data-i18n="contacts">Contacts
+        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+      </button>
+      <button class="tog" id="tog2" aria-label="Toggle dark/light mode">
+        <span class="tog-ic tog-moon" aria-hidden="true">🌙</span>
+        <span class="tog-ic tog-sun"  aria-hidden="true">☀️</span>
+      </button>
+    </div>
+
+  </div>
+
+  <!-- Mobile dropdown -->
+  <nav class="mob-drop" id="mobDrop" aria-label="Contact information">
+    <a href="tel:+393206138044"><i class="fas fa-phone" aria-hidden="true"></i>+39 320 613 8044</a>
+    <a href="mailto:yaraautoo@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>yaraautoo@gmail.com</a>
+    <div class="mob-soc">
+      <a href="https://wa.me/393206138044" target="_blank" rel="noopener noreferrer"
+         class="spill" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+      <a href="https://www.facebook.com/yaraautoo" target="_blank" rel="noopener noreferrer"
+         class="spill" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+      <a href="https://www.instagram.com/yaraauto_srl/" target="_blank" rel="noopener noreferrer"
+         class="spill" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO CAROUSEL -->
+<section class="hero" aria-label="Gallery">
+
+  <div class="c-track" id="cT">
+    <!--
+    ADD SLIDES HERE — examples:
+
+    IMAGE:
+    <div class="c-slide">
+      <img src="images/gallery/foto.webp" alt="YaraAuto showroom"
+           loading="lazy" width="1920" height="1080">
+    </div>
+
+    VIDEO:
+    <div class="c-slide">
+      <video autoplay muted loop playsinline
+             poster="images/gallery/thumb.webp" preload="none">
+        <source src="videos/clip.mp4" type="video/mp4">
+      </video>
+    </div>
+    -->
+
+    <!-- Placeholder slides (replace with real assets) -->
+    <div class="c-slide" style="background:linear-gradient(155deg,#100505,#1e0808,#0a0a0a)">
+      <img src="images/site_logo/logo_full_2.webp" alt="YaraAuto showroom"
+           style="object-fit:contain;padding:14%;opacity:.1">
+    </div>
+    <div class="c-slide" style="background:linear-gradient(155deg,#0a0a14,#0e0e24,#090909)">
+      <img src="images/site_logo/logo_full_2.webp" alt="YaraAuto fleet"
+           style="object-fit:contain;padding:14%;opacity:.1">
+    </div>
+    <div class="c-slide" style="background:linear-gradient(155deg,#050e05,#0b1c0b,#090909)">
+      <img src="images/site_logo/logo_full_2.webp" alt="YaraAuto cars"
+           style="object-fit:contain;padding:14%;opacity:.1">
+    </div>
+  </div>
+
+  <div class="hero-tx">
+    <p class="hero-ey" data-i18n="hero-ey">Certified Pre-Owned</p>
+    <h1 class="hero-h1">
+      <span data-i18n="hero-a">YOUR DREAM</span><br>
+      <span class="r" data-i18n="hero-b">CAR AWAITS</span>
+    </h1>
+    <p class="hero-sub" data-i18n="hero-sub">
+      Quality, passion and trust — every vehicle we sell comes with our personal guarantee.
+    </p>
+  </div>
+
+  <div class="c-ctrl" aria-label="Carousel navigation">
+    <button class="c-btn" id="cPrev" aria-label="Previous slide">
+      <i class="fas fa-chevron-left" aria-hidden="true"></i>
+    </button>
+    <button class="c-btn" id="cNext" aria-label="Next slide">
+      <i class="fas fa-chevron-right" aria-hidden="true"></i>
+    </button>
+  </div>
+
+  <div class="c-dots" id="cDots" role="tablist" aria-label="Slides"></div>
+
+  <div class="c-prog" aria-hidden="true">
+    <div class="c-prog-fill" id="cFill"></div>
+  </div>
+
+</section>
+
+<!-- AD SLOT TOP (inactive)
+<div class="ad-slot">
+  <ins class="adsbygoogle" style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="XXXXXXXXXX"
+       data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+-->
+
+<!-- INFO STRIP — 2 cards -->
+<div class="info-strip rv" role="list">
+  <div class="info-items">
+    <div class="info-item rv rv1" role="listitem">
+      <div class="info-ic"><i class="fas fa-car" aria-hidden="true"></i></div>
+      <span class="info-lb" data-i18n="i1l">Stock</span>
+      <span class="info-vl" data-i18n="i1v">Always updated</span>
+    </div>
+    <div class="info-item rv rv2" role="listitem">
+      <div class="info-ic"><i class="fas fa-handshake" aria-hidden="true"></i></div>
+      <span class="info-lb" data-i18n="i2l">Service</span>
+      <span class="info-vl" data-i18n="i2v">Personalised support</span>
+    </div>
+  </div>
+</div>
+
+<!-- CTA SECTION -->
+<section class="cta" aria-labelledby="cta-h">
+  <p class="cta-ey rv" data-i18n="cta-ey">Browse the catalogue</p>
+  <h2 class="cta-h2 rv" id="cta-h">
+    <span data-i18n="cta-a">FIND YOUR</span><br>
+    <span data-i18n="cta-b">PERFECT CAR</span>
+  </h2>
+  <p class="cta-sub rv" data-i18n="cta-sub">
+    Browse our latest vehicles directly on WhatsApp, Facebook or Instagram.
+  </p>
+  <div class="cta-btns">
+    <a href="https://wa.me/393206138044?text=Ciao%2C%20vorrei%20vedere%20il%20catalogo%20auto"
+       target="_blank" rel="noopener noreferrer"
+       class="cta-btn bwa rv rv1" aria-label="WhatsApp catalogue">
+      <i class="fab fa-whatsapp" aria-hidden="true"></i>
+      <span data-i18n="bwa">Catalogue on WhatsApp</span>
+    </a>
+    <a href="https://www.facebook.com/yaraautoo"
+       target="_blank" rel="noopener noreferrer"
+       class="cta-btn bfb rv rv2" aria-label="Facebook catalogue">
+      <i class="fab fa-facebook-f" aria-hidden="true"></i>
+      <span data-i18n="bfb">Catalogue on Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/yaraauto_srl/"
+       target="_blank" rel="noopener noreferrer"
+       class="cta-btn big rv rv3" aria-label="Instagram catalogue">
+      <i class="fab fa-instagram" aria-hidden="true"></i>
+      <span data-i18n="big">Catalogue on Instagram</span>
+    </a>
+  </div>
+</section>
+
+<!-- AD SLOT MID (inactive)
+<div class="ad-slot">
+  <ins class="adsbygoogle" style="display:block"
+       data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+       data-ad-slot="YYYYYYYYYY"
+       data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+-->
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="ft-in">
+    <div>
+      <div class="ft-logo">
+        <img src="images/site_logo/minilogo3.webp" alt="YaraAuto"
+             onerror="this.parentElement.innerHTML='<span style=\'font-family:var(--fd);font-size:1.4rem;color:var(--tx)\'>YARA<span style=\'color:var(--red)\'>AUTO</span></span>'">
+      </div>
+      <p class="ft-desc" data-i18n="ft-d">
+        Certified pre-owned vehicles sold with passion, quality and trust. Your dream car is here.
+      </p>
+    </div>
+    <div class="ft-col">
+      <h4 data-i18n="ft-c">Contacts</h4>
+      <a href="tel:+393206138044"><i class="fas fa-phone" aria-hidden="true"></i>+39 320 613 8044</a>
+      <a href="mailto:yaraautoo@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>yaraautoo@gmail.com</a>
+      <a href="https://wa.me/393206138044" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp
+      </a>
+    </div>
+    <div class="ft-col">
+      <h4 data-i18n="ft-f">Follow us</h4>
+      <a href="https://www.facebook.com/yaraautoo" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-facebook-f" aria-hidden="true"></i>Facebook
+      </a>
+      <a href="https://www.instagram.com/yaraauto_srl/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram" aria-hidden="true"></i>Instagram
+      </a>
+    </div>
+  </div>
+  <div class="ft-bot">
+    <p>&copy; <span id="fty"></span> YaraAuto — P.IVA IT00000000000</p>
+    <div class="ft-lnk">
+      <a href="privacy.html" data-i18n="ft-p">Privacy Policy</a>
+      <a href="cookie.html" data-i18n="ft-k">Cookie Policy</a>
+    </div>
+  </div>
+</footer>
+
+<a href="#top" class="btt" id="btt" aria-label="Back to top">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</a>
+
+<script>
+/* ── i18n ── */
+const T={
+  en:{
+    'contacts':'Contacts','hero-ey':'Certified Pre-Owned',
+    'hero-a':'YOUR DREAM','hero-b':'CAR AWAITS',
+    'hero-sub':'Quality, passion and trust — every vehicle we sell comes with our personal guarantee.',
+    'i1l':'Stock','i1v':'Always updated',
+    'i2l':'Service','i2v':'Personalised support',
+    'cta-ey':'Browse the catalogue',
+    'cta-a':'FIND YOUR','cta-b':'PERFECT CAR',
+    'cta-sub':'Browse our latest vehicles directly on WhatsApp, Facebook or Instagram.',
+    'bwa':'Catalogue on WhatsApp','bfb':'Catalogue on Facebook','big':'Catalogue on Instagram',
+    'ft-d':'Certified pre-owned vehicles sold with passion, quality and trust. Your dream car is here.',
+    'ft-c':'Contacts','ft-f':'Follow us','ft-p':'Privacy Policy','ft-k':'Cookie Policy',
+  },
+  it:{
+    'contacts':'Contatti','hero-ey':'Auto Usate Garantite',
+    'hero-a':'LA TUA AUTO','hero-b':'DEI SOGNI',
+    'hero-sub':'Qualità, passione e fiducia — ogni veicolo che vendiamo è garantito personalmente.',
+    'i1l':'Stock','i1v':'Sempre aggiornato',
+    'i2l':'Servizio','i2v':'Supporto personalizzato',
+    'cta-ey':'Sfoglia il catalogo',
+    'cta-a':'TROVA LA TUA','cta-b':'AUTO PERFETTA',
+    'cta-sub':'Guarda i nostri veicoli su WhatsApp, Facebook o Instagram.',
+    'bwa':'Catalogo su WhatsApp','bfb':'Catalogo su Facebook','big':'Catalogo su Instagram',
+    'ft-d':'Auto usate garantite con passione, qualità e fiducia. La tua auto dei sogni è qui.',
+    'ft-c':'Contatti','ft-f':'Seguici','ft-p':'Privacy Policy','ft-k':'Cookie Policy',
+  }
+};
+(function(){
+  const p=new URLSearchParams(location.search).get('lang');
+  const n=(navigator.language||'en').toLowerCase();
+  const l=(p&&T[p])?p:(n.startsWith('it')?'it':'en');
+  document.documentElement.lang=l;
+  const t=T[l];
+  document.querySelectorAll('[data-i18n]').forEach(e=>{const k=e.dataset.i18n;if(t[k])e.textContent=t[k]});
+})();
+
+/* ── Theme ── */
+(function(){
+  const s=localStorage.getItem('ya-theme')||'dark';
+  document.documentElement.setAttribute('data-theme',s);
+  function flip(){
+    const c=document.documentElement.getAttribute('data-theme');
+    const n=c==='dark'?'light':'dark';
+    document.documentElement.setAttribute('data-theme',n);
+    localStorage.setItem('ya-theme',n);
+  }
+  document.getElementById('tog1').addEventListener('click',flip);
+  document.getElementById('tog2').addEventListener('click',flip);
+})();
+
+/* ── Loader ── */
+window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loader').classList.add('done'),700));
+
+/* ── Header hide/show ── */
+(function(){
+  const h=document.querySelector('.hdr');
+  let ly=0,tk=false;
+  window.addEventListener('scroll',()=>{
+    if(!tk){requestAnimationFrame(()=>{const y=window.scrollY;h.classList.toggle('hide',y>ly&&y>100);ly=y;tk=false});tk=true}
+  },{passive:true});
+})();
+
+/* ── Mobile dropdown ── */
+(function(){
+  const b=document.getElementById('mobBtn'),m=document.getElementById('mobDrop');
+  if(!b||!m)return;
+  b.addEventListener('click',e=>{e.stopPropagation();const o=m.classList.toggle('open');b.classList.toggle('open',o);b.setAttribute('aria-expanded',o)});
+  document.addEventListener('click',e=>{if(!m.contains(e.target)&&e.target!==b){m.classList.remove('open');b.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+})();
+
+/* ── Infinite Carousel ── */
+(function(){
+  const track=document.getElementById('cT'),
+        dotsEl=document.getElementById('cDots'),
+        fill=document.getElementById('cFill'),
+        bP=document.getElementById('cPrev'),
+        bN=document.getElementById('cNext');
+  const INT=5500,TR=500,TRC=`transform ${TR}ms cubic-bezier(.4,0,.2,1)`;
+  const orig=Array.from(track.querySelectorAll('.c-slide')),N=orig.length;
+  if(!N)return;
+
+  // Clone first & last for infinite
+  const cF=orig[0].cloneNode(true),cL=orig[N-1].cloneNode(true);
+  cF.setAttribute('aria-hidden','true');cL.setAttribute('aria-hidden','true');
+  track.appendChild(cF);track.insertBefore(cL,orig[0]);
+  // Layout: [cL, s0, s1, ..., sN-1, cF]
+
+  let cur=1,busy=false,paused=false,aT=null,pRAF=null,pStart=null,pxStart=null;
+
+  // Dots
+  dotsEl.innerHTML='';
+  for(let i=0;i<N;i++){
+    const d=document.createElement('button');
+    d.className='c-dot';d.setAttribute('role','tab');d.setAttribute('aria-label',`Slide ${i+1}`);
+    d.addEventListener('click',()=>go(i+1,true));
+    dotsEl.appendChild(d);
+  }
+  const dots=Array.from(dotsEl.children);
+
+  function pos(i,a){track.style.transition=a?TRC:'none';track.style.transform=`translateX(${-i*100}%)`}
+  function sync(){const r=((cur-1)+N)%N;dots.forEach((d,i)=>{d.classList.toggle('active',i===r);d.setAttribute('aria-selected',i===r)})}
+
+  track.addEventListener('transitionend',()=>{
+    if(cur===0){cur=N;pos(N,false)}
+    else if(cur===N+1){cur=1;pos(1,false)}
+    busy=false;vidPlay();
+  });
+
+  function go(i,user=false){if(busy)return;busy=true;cur=i;pos(cur,true);sync();if(user)reset()}
+
+  function vidPlay(){
+    Array.from(track.querySelectorAll('.c-slide')).forEach((s,i)=>{
+      const v=s.querySelector('video');if(!v)return;
+      if(i===cur){v.currentTime=0;v.play().catch(()=>{})}else v.pause();
+    });
+  }
+
+  function startProg(){
+    cancelAnimationFrame(pRAF);pStart=performance.now();
+    function f(n){const p=Math.min(((n-pStart)/INT)*100,100);fill.style.width=p+'%';if(p<100)pRAF=requestAnimationFrame(f)}
+    pRAF=requestAnimationFrame(f);
+  }
+  function stopProg(){cancelAnimationFrame(pRAF);fill.style.width='0%'}
+
+  function startAuto(){if(paused)return;clearInterval(aT);startProg();aT=setInterval(()=>{if(!paused){stopProg();go(cur+1);startProg()}},INT)}
+  function stopAuto(){clearInterval(aT);stopProg()}
+  function reset(){stopAuto();setTimeout(startAuto,2200)}
+
+  bP.addEventListener('click',()=>go(cur-1,true));
+  bN.addEventListener('click',()=>go(cur+1,true));
+  document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')go(cur-1,true);if(e.key==='ArrowRight')go(cur+1,true)});
+
+  // Pointer swipe
+  const hero=document.querySelector('.hero');
+  hero.addEventListener('pointerdown',e=>{pxStart=e.clientX});
+  hero.addEventListener('pointerup',e=>{
+    if(pxStart===null)return;
+    const d=pxStart-e.clientX;
+    if(Math.abs(d)>48)go(d>0?cur+1:cur-1,true);
+    pxStart=null;
+  });
+  hero.addEventListener('pointercancel',()=>{pxStart=null});
+
+  // Hover pause
+  hero.addEventListener('mouseenter',()=>{paused=true;stopAuto()});
+  hero.addEventListener('mouseleave',()=>{paused=false;startAuto()});
+
+  // Tab visibility
+  document.addEventListener('visibilitychange',()=>{document.hidden?stopAuto():(paused||startAuto())});
+
+  // Resize snap
+  let rt;window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>pos(cur,false),120)});
+
+  pos(cur,false);sync();vidPlay();startAuto();
+})();
+
+/* ── Scroll reveal ── */
+(function(){
+  const els=document.querySelectorAll('.rv');
+  if(!els.length)return;
+  if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('vis'));return}
+  const ob=new IntersectionObserver(ens=>{ens.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');ob.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -28px 0px'});
+  els.forEach(e=>ob.observe(e));
+})();
+
+/* ── Back to top ── */
+(function(){
+  const b=document.getElementById('btt');
+  window.addEventListener('scroll',()=>b.classList.toggle('show',window.scrollY>320),{passive:true});
+})();
+
+document.getElementById('fty').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
