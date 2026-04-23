@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
   <!-- SEO -->
-  <title>YaraAuto</title>
-  <meta name="description" content="YaraAuto sells certified pre-owned vehicles with passion, quality and trust. Browse Audi, BMW, Fiat and more. | YaraAuto vende auto usate garantite con passione, qualità e fiducia.">
-  <meta name="keywords" content="auto usate, used cars, concessionario, car dealer, YaraAuto, occasioni auto, auto garantite, Audi usata, BMW usata">
+  <title>YaraAuto | Vendita Auto Usate Garantite e Nuove</title>
+  <meta name="description" content="YaraAuto: Concessionario specializzato nella vendita di auto usate garantite e auto nuove. Scopri le occasioni su Audi, BMW, Fiat, Mercedes e molte altre marche. Qualità e fiducia a tua disposizione.">
+  <meta name="keywords" content="auto usate, auto nuove, vendita auto, concessionario auto, YaraAuto, occasioni auto, auto garantite, Audi usata, BMW usata, auto usate Italia">
   <meta name="author" content="YaraAuto">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://yaraauto.it/">
@@ -257,6 +257,34 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;color:inhe
 .c-slide video{
   position:absolute;inset:0;
   width:100%;height:100%;object-fit:cover;
+  z-index:1;
+}
+
+/* Cinematic background for mobile */
+.c-slide::before {
+  content: '';
+  position: absolute; inset: -30px;
+  background-image: var(--bg-url);
+  background-size: cover;
+  background-position: center;
+  filter: blur(60px) brightness(0.8) saturate(1.4);
+
+
+  opacity: 0;
+  transition: opacity 0.4s;
+  z-index: 0;
+}
+@media(max-width: 768px) {
+  .c-slide::before { opacity: 1; display: block; }
+  .c-slide img,
+  .c-slide video { 
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    top: 8%; left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Gradient overlay */
@@ -264,12 +292,12 @@ button{cursor:pointer;border:none;background:none;font-family:inherit;color:inhe
   content:'';
   position:absolute;inset:0;
   background:linear-gradient(180deg,
-    rgba(0,0,0,.15) 0%,
-    transparent 32%,
-    rgba(0,0,0,.52) 70%,
-    rgba(0,0,0,.92) 100%
+    rgba(0,0,0,.25) 0%,
+    transparent 35%,
+    rgba(0,0,0,.65) 65%,
+    #090909 95%
   );
-  pointer-events:none;z-index:1;
+  pointer-events:none;z-index:3;
 }
 [data-theme="light"] .c-slide::after{
   background:linear-gradient(180deg,
@@ -529,10 +557,12 @@ footer{
   .mob-row{display:flex}
   .hdr-in{grid-template-columns:1fr auto;padding:0 16px}
   .hdr-logo{justify-self:flex-start;height:36px}
+  .hero{height:100svh;min-height:480px}
+
 
   .hero-tx{padding:0 20px clamp(54px,11vw,70px)}
-  .hero-h1{font-size:clamp(2.8rem,11vw,5rem)}
-  .hero-sub{font-size:.88rem;max-width:88%}
+  .hero-h1{font-size:clamp(3.5rem,14vw,6rem);line-height:0.9}
+  .hero-sub{font-size:1.05rem;max-width:95%;margin-top:12px}
   .c-ctrl{bottom:clamp(48px,10vw,58px);right:16px}
 
   .info-items{max-width:420px}
@@ -550,7 +580,8 @@ footer{
 /* Small 480 */
 @media(max-width:480px){
   .hero-ey::before{display:none}
-  .hero-h1{font-size:clamp(2.4rem,13vw,3.6rem)}
+
+  .hero-h1{font-size:clamp(3rem,15vw,4.5rem)}
   .hero-sub{display:none}
   .c-dot{width:5px;height:5px}
   .c-dot.active{width:18px}
@@ -672,19 +703,31 @@ footer{
     </div>
     -->
     <div class="c-slide">
-      <img src="images/gallery/1.jpeg" alt="YaraAuto showroom - 1"
+      <img src="images/gallery/1.jpeg" alt="Vendita Audi A3 usata garantita - YaraAuto"
            loading="lazy" width="1920" height="1080">
     </div>
     <div class="c-slide">
-      <img src="images/gallery/3.jpeg" alt="YaraAuto showroom - 3"
+      <img src="images/gallery/2.jpeg" alt="Occasione BMW Serie 1 in pronta consegna - YaraAuto"
            loading="lazy" width="1920" height="1080">
     </div>
     <div class="c-slide">
-      <img src="images/gallery/5.jpeg" alt="YaraAuto showroom - 5"
+      <img src="images/gallery/3.jpeg" alt="Showroom auto usate plurimarca - YaraAuto"
            loading="lazy" width="1920" height="1080">
     </div>
     <div class="c-slide">
-      <img src="images/gallery/4.jpeg" alt="YaraAuto showroom - 4"
+      <img src="images/gallery/4.jpeg" alt="Mercedes Classe A usata certificata - YaraAuto"
+           loading="lazy" width="1920" height="1080">
+    </div>
+    <div class="c-slide">
+      <img src="images/gallery/5.jpeg" alt="Fiat 500 usata e nuove occasioni - YaraAuto"
+           loading="lazy" width="1920" height="1080">
+    </div>
+    <div class="c-slide">
+      <img src="images/gallery/7.jpeg" alt="Volkswagen Golf usata in ottime condizioni - YaraAuto"
+           loading="lazy" width="1920" height="1080">
+    </div>
+    <div class="c-slide">
+      <img src="images/gallery/9.jpeg" alt="Ampia scelta di auto usate garantite - YaraAuto"
            loading="lazy" width="1920" height="1080">
     </div>
     
@@ -921,6 +964,14 @@ window.addEventListener('load',()=>setTimeout(()=>document.getElementById('loade
   const INT=5500,TR=500,TRC=`transform ${TR}ms cubic-bezier(.4,0,.2,1)`;
   const orig=Array.from(track.querySelectorAll('.c-slide')),N=orig.length;
   if(!N)return;
+
+  // Cinematic backgrounds for mobile
+  orig.forEach(s=>{
+    const img=s.querySelector('img'),vid=s.querySelector('video');
+    if(img) s.style.setProperty('--bg-url',`url(${img.src})`);
+    else if(vid && vid.poster) s.style.setProperty('--bg-url',`url(${vid.poster})`);
+  });
+
 
   // Clone first & last for infinite
   const cF=orig[0].cloneNode(true),cL=orig[N-1].cloneNode(true);
