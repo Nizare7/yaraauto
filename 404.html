@@ -116,7 +116,7 @@
     </a>
 
     <p class="countdown" id="countdown">
-      Automatic redirect in <span id="sec">10</span> seconds
+      Use the button to return to the homepage.
     </p>
   </div>
 
@@ -135,17 +135,7 @@
       document.getElementById('countdown').innerHTML = 'Reindirizzamento automatico tra <span id="sec">10</span> secondi';
     }
 
-    // Countdown redirect
-    let s = 10;
-    const secEl = document.getElementById('sec');
-    const interval = setInterval(() => {
-      s--;
-      if (secEl) secEl.textContent = s;
-      if (s <= 0) { clearInterval(interval); window.location.href = '/'; }
-    }, 1000);
-
-    // Cancel on click
-    document.getElementById('homeBtn').addEventListener('click', () => clearInterval(interval));
+    // No automatic redirect: user should click the button to go home.
   </script>
 </body>
 </html>
