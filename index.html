@@ -513,11 +513,23 @@ footer{
   text-transform:uppercase;color:var(--red);margin-bottom:16px;
 }
 .ft-col a{
-  display:flex;align-items:center;gap:8px;
-  font-size:.85rem;color:var(--tx2);padding:5px 0;transition:color .2s;
+  display:flex;align-items:center;gap:10px;
+  font-size:.85rem;color:var(--tx2);padding:6px 0;transition:all .2s;
 }
-.ft-col a:hover{color:var(--tx)}
-.ft-col i{width:14px;color:var(--red);font-size:.78rem}
+.ft-col a:hover{color:var(--tx);transform:translateX(3px)}
+.ft-col i{width:16px;color:var(--red);font-size:.82rem}
+
+.ft-social{display:flex;gap:12px;margin-top:4px}
+.ft-social-a{
+  width:36px;height:36px;border-radius:10px;
+  background:var(--bg);border:1px solid var(--brd);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--tx2);font-size:.9rem;transition:all .25s var(--ease);
+}
+.ft-social-a:hover{
+  background:var(--red);border-color:var(--red);color:#fff;
+  transform:translateY(-3px);
+}
 .ft-bot{
   max-width:1100px;margin:30px auto 0;
   padding-top:22px;border-top:1px solid var(--brd);
@@ -588,8 +600,11 @@ footer{
   .cta-btns{flex-direction:column;align-items:stretch;max-width:290px;margin:0 auto}
   .cta-btn{min-width:unset;width:100%;padding:14px 18px}
 
-  .ft-in{grid-template-columns:1fr;gap:26px}
-  .ft-bot{flex-direction:column;align-items:flex-start;gap:8px}
+  .ft-in{grid-template-columns:1fr;gap:32px}
+  .ft-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:20px}
+  .ft-bot{flex-direction:column;align-items:center;text-align:center;gap:14px}
+  .ft-bot p{order:2}
+  .ft-lnk{order:1}
 }
 
 /* Small 480 */
@@ -852,7 +867,7 @@ footer{
 
 <!-- FOOTER -->
 <footer role="contentinfo">
-  <div class="ft-in">
+  <div class="ft-in rv">
     <div>
       <div class="ft-logo">
         <img src="images/site_logo/minilogo3.webp" alt="YaraAuto"
@@ -862,28 +877,32 @@ footer{
         Certified pre-owned vehicles sold with passion, quality and trust. Your dream car is here.
       </p>
     </div>
-    <div class="ft-col">
-      <h4 data-i18n="ft-c">Contacts</h4>
-      <a href="tel:+393206138044"><i class="fas fa-phone" aria-hidden="true"></i>+39 320 613 8044</a>
-      <a href="mailto:yaraautoo@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>yaraautoo@gmail.com</a>
-      <a href="https://www.google.com/maps/search/?api=1&query=Via+don+Lorenzo+Milani+2B+Annico+CR" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>Via don Lorenzo Milani 2B, Annico (CR)
-      </a>
-      <a href="https://wa.me/393206138044" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp
-      </a>
-    </div>
-    <div class="ft-col">
-      <h4 data-i18n="ft-f">Follow us</h4>
-      <a href="https://www.facebook.com/yaraautoo" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-facebook-f" aria-hidden="true"></i>Facebook
-      </a>
-      <a href="https://www.instagram.com/yaraauto_srls/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram" aria-hidden="true"></i>Instagram
-      </a>
-      <a href="https://www.tiktok.com/@yaraautosrls" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-tiktok" aria-hidden="true"></i>TikTok
-      </a>
+    <div class="ft-grid">
+      <div class="ft-col">
+        <h4 data-i18n="ft-c">Contacts</h4>
+        <a href="tel:+393206138044"><i class="fas fa-phone" aria-hidden="true"></i>+39 320 613 8044</a>
+        <a href="mailto:yaraautoo@gmail.com"><i class="fas fa-envelope" aria-hidden="true"></i>yaraautoo@gmail.com</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=Via+don+Lorenzo+Milani+2B+Annico+CR" target="_blank" rel="noopener noreferrer">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>Via don Lorenzo Milani 2B, Annico (CR)
+        </a>
+        <a href="https://wa.me/393206138044" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>WhatsApp
+        </a>
+      </div>
+      <div class="ft-col">
+        <h4 data-i18n="ft-f">Follow us</h4>
+        <div class="ft-social">
+          <a href="https://www.facebook.com/yaraautoo" class="ft-social-a" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.instagram.com/yaraauto_srls/" class="ft-social-a" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.tiktok.com/@yaraautosrls" class="ft-social-a" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+            <i class="fab fa-tiktok" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="ft-bot">
