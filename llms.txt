@@ -1,0 +1,28 @@
+# YaraAuto - Vendita Auto Usate Garantite e Nuove
+
+YaraAuto è un concessionario specializzato nella vendita di auto usate certificate e auto nuove in Italia. Ci concentriamo su qualità, fiducia e un'esperienza d'acquisto digitale trasparente attraverso i canali social.
+
+> [!NOTE]
+> Per una documentazione completa e i dettagli di tutte le sedi locali, visita [/llms-full.txt](/llms-full.txt).
+
+## Core Services
+- **Auto Usate Garantite**: Veicoli plurimarca (Audi, BMW, Mercedes, Fiat, etc.) con garanzia di qualità.
+- **Vendita Auto Nuove**: Ultime novità del mercato automobilistico.
+- **Supporto Personalizzato**: Consulenza dedicata per ogni cliente.
+- **Social-First Selling**: Sfoglia il catalogo direttamente su WhatsApp e Social Media.
+
+## Key Links
+- [Sito Ufficiale](https://yaraauto.it/)
+- [WhatsApp Catalogo](https://wa.me/393206138044)
+- [Instagram](https://www.instagram.com/yaraauto_srls/)
+- [Facebook](https://www.facebook.com/yaraautoo)
+- [TikTok](https://www.tiktok.com/@yaraautosrls)
+
+## Local Presence
+Operiamo nelle principali città italiane tra cui:
+Milano, Bergamo, Torino, Venezia, Verona, Bologna, Genova, Padova, Monza, Brescia.
+
+## Contacts
+- **Telefono**: [+39 320 613 8044](tel:+393206138044)
+- **Email**: yaraautoo@gmail.com
+- **Indirizzo**: Via don Lorenzo Milani 2B, Annico (CR), Italia

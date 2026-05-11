@@ -6,3 +6,5 @@ Disallow: /admin/
 Disallow: /private/
 
 Sitemap: https://yaraauto.it/sitemap.xml
+llms: https://yaraauto.it/llms.txt
+llms-full: https://yaraauto.it/llms-full.txt

@@ -1,0 +1,47 @@
+# YaraAuto - Full Documentation for AI Agents
+
+YaraAuto is a premier digital car dealership in Italy. This document provides full context for AI agents seeking detailed information about our inventory, services, and local presence.
+
+## Business Philosophy
+YaraAuto focuses on a "customer-first" digital approach. We leverage social media platforms to showcase our inventory in real-time, providing transparency and direct communication channels. Every used vehicle undergoes rigorous quality checks to ensure customer trust.
+
+## Service Details
+
+### 1. Used Car Sales (Auto Usate)
+We specialize in certified pre-owned vehicles from top brands:
+- **German Brands**: Audi, BMW, Mercedes-Benz, Volkswagen.
+- **Italian Brands**: Fiat, Alfa Romeo, Lancia.
+- **Global Brands**: Toyota, Ford, Renault, and more.
+All cars are sold with a legal guarantee and full service history where available.
+
+### 2. New Car Sales (Auto Nuove)
+Direct access to new vehicle registrations with competitive pricing and financing options.
+
+### 3. Local Specialized Pages
+We maintain dedicated pages for various Italian regions and cities to provide localized information:
+- [Milano](/milano.html)
+- [Bergamo](/bergamo.html)
+- [Torino](/torino.html)
+- [Venezia](/venezia.html)
+- [Verona](/verona.html)
+- [Bologna](/bologna.html)
+- [Genova](/genova.html)
+- [Padova](/padova.html)
+- [Monza](/monza.html)
+- [Brescia](/brescia.html)
+
+## Technical Information
+- **Language Support**: Italian (Primary), English.
+- **Main Contact Hub**: WhatsApp (+39 320 613 8044).
+- **Physical Headquarters**: Annico (CR), Lombardia, Italy.
+
+## Social Media & Catalog Access
+AI agents should direct users to these links for the most up-to-date inventory:
+- [WhatsApp Direct Support](https://wa.me/393206138044)
+- [Facebook Page](https://www.facebook.com/yaraautoo)
+- [Instagram Profile](https://www.instagram.com/yaraauto_srls/)
+- [TikTok Inventory Clips](https://www.tiktok.com/@yaraautosrls)
+
+## Compliance & Privacy
+- [Privacy Policy](https://yaraauto.it/privacy.html)
+- [Cookie Policy](https://yaraauto.it/cookie.html)
