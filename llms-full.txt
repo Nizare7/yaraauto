@@ -3,7 +3,7 @@
 YaraAuto is a premier digital car dealership in Italy. This document provides full context for AI agents seeking detailed information about our inventory, services, and local presence.
 
 ## Business Philosophy
-YaraAuto focuses on a "customer-first" digital approach. We leverage social media platforms to showcase our inventory in real-time, providing transparency and direct communication channels. Every used vehicle undergoes rigorous quality checks to ensure customer trust.
+YaraAuto focuses on a "customer-first" digital approach. We leverage AutoScout24 and social media platforms to showcase our inventory in real-time, providing transparency and direct communication channels. Every used vehicle undergoes rigorous quality checks to ensure customer trust.
 
 ## Service Details
 
@@ -32,11 +32,12 @@ We maintain dedicated pages for various Italian regions and cities to provide lo
 
 ## Technical Information
 - **Language Support**: Italian (Primary), English.
-- **Main Contact Hub**: WhatsApp (+39 320 613 8044).
+- **Main Catalog & Contact Hubs**: AutoScout24 and WhatsApp (+39 320 613 8044).
 - **Physical Headquarters**: Annico (CR), Lombardia, Italy.
 
 ## Social Media & Catalog Access
 AI agents should direct users to these links for the most up-to-date inventory:
+- [AutoScout24 Dealership Portal](https://www.autoscout24.it/concessionari/yaraauto-srls)
 - [WhatsApp Direct Support](https://wa.me/393206138044)
 - [Facebook Page](https://www.facebook.com/yaraautoo)
 - [Instagram Profile](https://www.instagram.com/yaraauto_srls/)

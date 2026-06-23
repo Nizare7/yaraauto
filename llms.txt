@@ -1,6 +1,6 @@
 # YaraAuto - Vendita Auto Usate Garantite e Nuove
 
-YaraAuto è un concessionario specializzato nella vendita di auto usate certificate e auto nuove in Italia. Ci concentriamo su qualità, fiducia e un'esperienza d'acquisto digitale trasparente attraverso i canali social.
+YaraAuto è un concessionario specializzato nella vendita di auto usate certificate e auto nuove in Italia. Ci concentriamo su qualità, fiducia e un'esperienza d'acquisto digitale trasparente attraverso portali come AutoScout24, canali social e WhatsApp.
 
 > [!NOTE]
 > Per una documentazione completa e i dettagli di tutte le sedi locali, visita [/llms-full.txt](/llms-full.txt).
@@ -9,13 +9,14 @@ YaraAuto è un concessionario specializzato nella vendita di auto usate certific
 - **Auto Usate Garantite**: Veicoli plurimarca (Audi, BMW, Mercedes, Fiat, etc.) con garanzia di qualità.
 - **Vendita Auto Nuove**: Ultime novità del mercato automobilistico.
 - **Supporto Personalizzato**: Consulenza dedicata per ogni cliente.
-- **Social-First Selling**: Sfoglia il catalogo direttamente su WhatsApp e Social Media.
+- **Social & Portal Selling**: Sfoglia il catalogo e le offerte direttamente su AutoScout24, WhatsApp e Social Media.
 
 ## Key Links
 - [Sito Ufficiale](https://yaraauto.it/)
+- [AutoScout24](https://www.autoscout24.it/concessionari/yaraauto-srls)
 - [WhatsApp Catalogo](https://wa.me/393206138044)
-- [Instagram](https://www.instagram.com/yaraauto_srls/)
 - [Facebook](https://www.facebook.com/yaraautoo)
+- [Instagram](https://www.instagram.com/yaraauto_srls/)
 - [TikTok](https://www.tiktok.com/@yaraautosrls)
 
 ## Local Presence
